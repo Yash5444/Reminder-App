@@ -21,6 +21,6 @@ class Reminder extends BaseModel
     ];
 
     protected $casts = [
-        'date_time' => 'datetime'
+        'date_time' => 'datetime:d-m-Y H:i a'
     ];
 }

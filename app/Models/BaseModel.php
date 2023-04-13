@@ -13,12 +13,12 @@ class BaseModel extends Model
         parent::boot();
         // create a event to happen on creating
         static::creating(function ($record) {
-            $record->created_by = request()->user() ? request()->user()->id : 0;
-            $record->updated_by = request()->user() ? request()->user()->id : 0;
+            $record->created_by = auth()->user() ? auth()->user()->id : 0;
+            $record->updated_by = auth()->user() ? auth()->user()->id : 0;
         });
         // create a event to happen on updating
         static::updating(function ($record) {
-            $record->updated_by = request()->user() ? request()->user()->id : 0;
+            $record->updated_by = auth()->user() ? auth()->user()->id : 0;
         });
     }
 }
