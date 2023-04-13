@@ -1,11 +1,13 @@
-*.sqlite*
 /vendor
+/vendor/composer
 /public/storage
+/public/hot
 /storage/*.key
 .env
 .phpunit.result.cache
 .env.production
 .env.staging
 storage/debugbar/
-storage/framework/laravel-excel/
 /node_modules
+composer.lock
+package-lock.json
